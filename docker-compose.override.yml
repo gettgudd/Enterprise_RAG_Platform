@@ -1,0 +1,7 @@
+# Local development overrides
+# Automatically read by `docker compose up`
+services:
+  api:
+    environment:
+      - LOG_LEVEL=DEBUG
+      - APP_ENV=development

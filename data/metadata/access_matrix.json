@@ -1,0 +1,39 @@
+{
+  "roles": {
+    "admin": {
+      "description": "Enterprise Super Administrator with full visibility across all departments and classification tiers",
+      "allowed_access_levels": ["public", "internal", "confidential", "restricted"],
+      "allowed_departments": ["*"]
+    },
+    "manager": {
+      "description": "Department or Engineering/Product Manager",
+      "allowed_access_levels": ["public", "internal", "confidential"],
+      "allowed_departments": ["own_department", "company-wide"]
+    },
+    "employee": {
+      "description": "Individual contributor across company departments",
+      "allowed_access_levels": ["public", "internal"],
+      "allowed_departments": ["own_department", "company-wide"]
+    }
+  },
+  "sample_users": [
+    {
+      "user_id": "usr-admin-01",
+      "username": "chief_admin",
+      "role": "admin",
+      "department": "IT"
+    },
+    {
+      "user_id": "usr-mgr-01",
+      "username": "finance_lead",
+      "role": "manager",
+      "department": "Finance"
+    },
+    {
+      "user_id": "usr-emp-01",
+      "username": "junior_dev",
+      "role": "employee",
+      "department": "Engineering"
+    }
+  ]
+}
